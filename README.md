@@ -19,7 +19,7 @@ Other Ansible roles that install NVM and/or Node.js fall short in a few areas.
 ## Where this role differs from other roles
 
 1. You can install NVM via wget, curl or git
-1. You can use NVM just like you would via your [command line](https://github.com/creationix/nvm#usage) in your own Ansible tasks and playbooks
+1. You can use NVM just like you would via your [command line](https://github.com/nvm-sh/nvm#usage) in your own Ansible tasks and playbooks
 1. You can install whatever **version** or **versions** of Node.js you want
 1. Doesn't install NVM or Node.js as root
 1. Can run arbitrary nvm, npm, node, bash or shell commands potentially eliminating the need for a separate Node Ansible role all together
@@ -364,7 +364,7 @@ Set default version of Node when maintaining/installing multiple versions
 > *NVM will automatically alias the first run/installed version as "default" which is more than likely what people will use this role  for, however, this will allow for installation/upgrade of multiple versions on an existing machine*
 
 
-List of [NVM commands to run](https://github.com/creationix/nvm#usage). Default is an empty list.
+List of [NVM commands to run](https://github.com/nvm-sh/nvm#usage). Default is an empty list.
 
     nvm_commands: []
 
@@ -389,7 +389,7 @@ NVM Profile location Options are .profile, .bashrc, .bash_profile, .zshrc
 > *On a per user basis tied to a specific user account e.g. `/home/vagrant/.bashrc` This role will create the appropriate profile file if it does not exist.
 :warning: If you specify nvm_profile: `"/home/node-user/.bashrc"` and the `node-user` is not a real user on the box, then nvm will not work as you expect.*
 
-NVM source location i.e. you host your own fork of [NVM](https://github.com/creationix/nvm)
+NVM source location i.e. you host your own fork of [NVM](https://github.com/nvm-sh/nvm)
 
     nvm_source: ""
 
